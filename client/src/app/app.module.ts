@@ -1,19 +1,45 @@
+import { RouterModule, Router } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UiModule } from './ui/ui.module';
+import { ProjectsIndexComponent } from './projects/projects-index/projects-index.component';
+import { ProjectsCSharpComponent } from './projects/projects-csharp/projects-csharp.component';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProjectsIndexComponent,
+    ProjectsCSharpComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    UiModule
+    BrowserModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: HomeComponent
+      },
+      {
+        path: 'projects/csharp',
+        component: ProjectsCSharpComponent
+      },
+      {
+        path: 'projects',
+        component: ProjectsIndexComponent
+      },
+      {
+        path: '**',
+        component: NotFoundComponent
+      },
+    ])
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
