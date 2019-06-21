@@ -204,7 +204,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron\">\n  <h1>Jeffrey Santana</h1>\n  <p>\n    Here I will showcase all the projects I have made.\n  </p>\n</div>"
+module.exports = "<div class=\"jumbotron\">\n  <h1>Jeffrey Santana</h1>\n  <p>\n    This website is coming soon.\n  </p>\n  <p>\n    Check back soon to see any changes made.\n  </p>\n</div>"
 
 /***/ }),
 
