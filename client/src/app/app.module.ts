@@ -8,6 +8,7 @@ import { ProjectsIndexComponent } from './projects/projects-index/projects-index
 import { ProjectsCSharpComponent } from './projects/projects-csharp/projects-csharp.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ProjectsIndexComponent,
     ProjectsCSharpComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ComingSoonComponent
   ],
   imports: [
     AppRoutingModule,
@@ -23,7 +25,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     RouterModule.forRoot([
       {
         path: '',
-        component: HomeComponent
+        component: ComingSoonComponent
       },
       {
         path: 'projects/csharp',
