@@ -74,7 +74,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand\" [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\">Jeffrey Santana</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\" [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\">Home <span\n            class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" routerLinkActive=\"router-link-active\" id=\"navbarDropdown\"\n          role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          Projects\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"dropdown-item\" [routerLink]=\"['/projects/csharp']\" routerLinkActive=\"router-link-active\">C#</a>\n        </div>\n      </li>\n    </ul>\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </div>\n</nav>\n<router-outlet></router-outlet>"
+module.exports = "<!-- <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand\" [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\">Jeffrey Santana</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\" [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\">Home <span\n            class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" routerLinkActive=\"router-link-active\" id=\"navbarDropdown\"\n          role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          Projects\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"dropdown-item\" [routerLink]=\"['/projects/csharp']\" routerLinkActive=\"router-link-active\">C#</a>\n        </div>\n      </li>\n    </ul>\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </div>\n</nav> -->\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -130,6 +130,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _projects_projects_csharp_projects_csharp_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./projects/projects-csharp/projects-csharp.component */ "./src/app/projects/projects-csharp/projects-csharp.component.ts");
 /* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
 /* harmony import */ var _components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/not-found/not-found.component */ "./src/app/components/not-found/not-found.component.ts");
+/* harmony import */ var _components_coming_soon_coming_soon_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/coming-soon/coming-soon.component */ "./src/app/components/coming-soon/coming-soon.component.ts");
+
 
 
 
@@ -150,7 +152,8 @@ var AppModule = /** @class */ (function () {
                 _projects_projects_index_projects_index_component__WEBPACK_IMPORTED_MODULE_6__["ProjectsIndexComponent"],
                 _projects_projects_csharp_projects_csharp_component__WEBPACK_IMPORTED_MODULE_7__["ProjectsCSharpComponent"],
                 _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
-                _components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_9__["NotFoundComponent"]
+                _components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_9__["NotFoundComponent"],
+                _components_coming_soon_coming_soon_component__WEBPACK_IMPORTED_MODULE_10__["ComingSoonComponent"]
             ],
             imports: [
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
@@ -158,7 +161,7 @@ var AppModule = /** @class */ (function () {
                 _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot([
                     {
                         path: '',
-                        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"]
+                        component: _components_coming_soon_coming_soon_component__WEBPACK_IMPORTED_MODULE_10__["ComingSoonComponent"]
                     },
                     {
                         path: 'projects/csharp',
@@ -180,6 +183,87 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/coming-soon/coming-soon.component.css":
+/*!******************************************************************!*\
+  !*** ./src/app/components/coming-soon/coming-soon.component.css ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = " /* Set height to 100% for body and html to enable the background image to cover the whole page: */\r\n body, html {\r\n  height: 100%\r\n}\r\n .bgimg {\r\n  background-repeat: no-repeat;\r\n  /* Full-screen */\r\n  width: 120%;\r\n  /* Center the background image */\r\n  background-position: center;\r\n  /* Scale and zoom in the image */\r\n  background-size: cover;\r\n  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */\r\n  position: relative;\r\n}\r\n .content{\r\n  /* Add a white text color to all elements inside the .bgimg container */\r\n  color: black;\r\n  /* Add a font */\r\n  font-family: \"Courier New\", Courier, monospace;\r\n  /* Set the font-size to 25 pixels */\r\n  font-size: 25px;\r\n}\r\n .no-xscroll{\r\n  overflow-x: hidden;\r\n  white-space: nowrap;\r\n}\r\n /* Position text in the middle */\r\n .middle {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  -webkit-transform: translate(-50%, -50%);\r\n          transform: translate(-50%, -50%);\r\n  text-align: center;\r\n}\r\n /* Style the <hr> element */\r\n hr {\r\n  margin: auto;\r\n  width: 40%;\r\n} \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9jb21pbmctc29vbi9jb21pbmctc29vbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJDQUFDLGlHQUFpRztDQUNqRztFQUNDO0FBQ0Y7Q0FFQTtFQUNFLDRCQUE0QjtFQUM1QixnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGdDQUFnQztFQUNoQywyQkFBMkI7RUFDM0IsZ0NBQWdDO0VBQ2hDLHNCQUFzQjtFQUN0QixrR0FBa0c7RUFDbEcsa0JBQWtCO0FBQ3BCO0NBRUE7RUFDRSx1RUFBdUU7RUFDdkUsWUFBWTtFQUNaLGVBQWU7RUFDZiw4Q0FBOEM7RUFDOUMsbUNBQW1DO0VBQ25DLGVBQWU7QUFDakI7Q0FFQTtFQUNFLGtCQUFrQjtFQUNsQixtQkFBbUI7QUFDckI7Q0FFQSxnQ0FBZ0M7Q0FDaEM7RUFDRSxrQkFBa0I7RUFDbEIsUUFBUTtFQUNSLFNBQVM7RUFDVCx3Q0FBZ0M7VUFBaEMsZ0NBQWdDO0VBQ2hDLGtCQUFrQjtBQUNwQjtDQUVBLDJCQUEyQjtDQUMzQjtFQUNFLFlBQVk7RUFDWixVQUFVO0FBQ1oiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2NvbWluZy1zb29uL2NvbWluZy1zb29uLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgLyogU2V0IGhlaWdodCB0byAxMDAlIGZvciBib2R5IGFuZCBodG1sIHRvIGVuYWJsZSB0aGUgYmFja2dyb3VuZCBpbWFnZSB0byBjb3ZlciB0aGUgd2hvbGUgcGFnZTogKi9cclxuIGJvZHksIGh0bWwge1xyXG4gIGhlaWdodDogMTAwJVxyXG59XHJcblxyXG4uYmdpbWcge1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgLyogRnVsbC1zY3JlZW4gKi9cclxuICB3aWR0aDogMTIwJTtcclxuICAvKiBDZW50ZXIgdGhlIGJhY2tncm91bmQgaW1hZ2UgKi9cclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgLyogU2NhbGUgYW5kIHpvb20gaW4gdGhlIGltYWdlICovXHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAvKiBBZGQgcG9zaXRpb246IHJlbGF0aXZlIHRvIGVuYWJsZSBhYnNvbHV0ZWx5IHBvc2l0aW9uZWQgZWxlbWVudHMgaW5zaWRlIHRoZSBpbWFnZSAocGxhY2UgdGV4dCkgKi9cclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuXHJcbi5jb250ZW50e1xyXG4gIC8qIEFkZCBhIHdoaXRlIHRleHQgY29sb3IgdG8gYWxsIGVsZW1lbnRzIGluc2lkZSB0aGUgLmJnaW1nIGNvbnRhaW5lciAqL1xyXG4gIGNvbG9yOiBibGFjaztcclxuICAvKiBBZGQgYSBmb250ICovXHJcbiAgZm9udC1mYW1pbHk6IFwiQ291cmllciBOZXdcIiwgQ291cmllciwgbW9ub3NwYWNlO1xyXG4gIC8qIFNldCB0aGUgZm9udC1zaXplIHRvIDI1IHBpeGVscyAqL1xyXG4gIGZvbnQtc2l6ZTogMjVweDtcclxufVxyXG5cclxuLm5vLXhzY3JvbGx7XHJcbiAgb3ZlcmZsb3cteDogaGlkZGVuO1xyXG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbn1cclxuXHJcbi8qIFBvc2l0aW9uIHRleHQgaW4gdGhlIG1pZGRsZSAqL1xyXG4ubWlkZGxlIHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiA1MCU7XHJcbiAgbGVmdDogNTAlO1xyXG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLyogU3R5bGUgdGhlIDxocj4gZWxlbWVudCAqL1xyXG5ociB7XHJcbiAgbWFyZ2luOiBhdXRvO1xyXG4gIHdpZHRoOiA0MCU7XHJcbn0gIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/components/coming-soon/coming-soon.component.html":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/coming-soon/coming-soon.component.html ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class='content no-xscroll'>\n  <img class='bgimg' src='../../../assets/img/ForestBridge.jpeg' />\n  <div class=\"middle\">\n    <h1>COMING SOON</h1>\n    <hr>\n    <p id=\"countdown\">Loading...</p>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/coming-soon/coming-soon.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/coming-soon/coming-soon.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: ComingSoonComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComingSoonComponent", function() { return ComingSoonComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+
+
+
+var ComingSoonComponent = /** @class */ (function () {
+    function ComingSoonComponent(document) {
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jul 1, 2019 00:00:00").getTime();
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            // Get todays date and time
+            var now = new Date().getTime();
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Display the result in an element with id="demo"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    }
+    ComingSoonComponent.prototype.ngOnInit = function () {
+    };
+    ComingSoonComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-coming-soon',
+            template: __webpack_require__(/*! ./coming-soon.component.html */ "./src/app/components/coming-soon/coming-soon.component.html"),
+            styles: [__webpack_require__(/*! ./coming-soon.component.css */ "./src/app/components/coming-soon/coming-soon.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_2__["DOCUMENT"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object])
+    ], ComingSoonComponent);
+    return ComingSoonComponent;
 }());
 
 
