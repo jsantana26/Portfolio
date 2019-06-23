@@ -1,26 +1,129 @@
- /* Set height to 100% for body and html to enable the background image to cover the whole page: */
+ * {
+   box-sizing: border-box;
+ }
+
+ html, body{
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   color:#fff;
+   background:#333;
+   overflow: hidden;
+ }
+
+ .landing{
+   position: relative;
+   background-image: url('../../../assets/img/ChicagoRiver@1x.jpg');
+   background-size: cover;
+   background-position: center;
+   height:100vh;
+ }
+
+ .landing-inner{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,0.4);
+   text-align: center;
+   padding-top: 100px;
+ }
+
+ .landing h1{
+   font-size: 50px;
+ }
+
+ .countdown {
+   font-size: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+ }
+ 
+ .countdown div{
+   padding: 20px;
+   border: 1px solid white;
+   border-radius: 10px;
+   margin: 5px;
+   opacity: 0.7;
+   background: black;
+ }
+
+ .countdown div:first-child{
+   background: #17a2b8;
+ }
+
+ .countdown span{
+   display: block;
+   font-size: 25px;
+ }
+
+ @media(max-width: 650px){
+   .landing img{
+     width: 70%;
+   }
+   .landing h1{
+     font-size: 40px;
+   }
+   .countdown{
+     font-size: 30px;
+     flex-direction: column;
+   }
+   .countdown div{
+     display:none;
+   }
+   .countdown div:first-child{
+     display: block;
+     width: 65%;
+     padding: 10px;
+   }
+   .countdown div:nth-child(2){
+     display: block;
+     width: 65%;
+     padding: 10px;
+   }
+   .countdown div:nth-child(3){
+     display: block;
+     width: 65%;
+     padding: 10px;
+  }
+ }
+
+ @media(max-height: 400px){
+   img{
+     width: 20%;
+     padding-bottom: 30px;
+   }
+   h1{
+     display:none
+    }
+ }
+ /* Set height to 100% for body and html to enable the background image to cover the whole page: 
  body, html {
   height: 100%
 }
 
 .bgimg {
   background-repeat: no-repeat;
-  /* Full-screen */
-  width: 120%;
-  /* Center the background image */
+  /* Full-screen 
+  height: auto;
+  max-width: 104%;
+
+  /* Center the background image 
   background-position: center;
-  /* Scale and zoom in the image */
+  /* Scale and zoom in the image 
   background-size: cover;
-  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) 
   position: relative;
 }
 
 .content{
-  /* Add a white text color to all elements inside the .bgimg container */
+  /* Add a white text color to all elements inside the .bgimg container 
   color: black;
-  /* Add a font */
+  /* Add a font 
   font-family: "Courier New", Courier, monospace;
-  /* Set the font-size to 25 pixels */
+  /* Set the font-size to 25 pixels 
   font-size: 25px;
 }
 
@@ -29,7 +132,7 @@
   white-space: nowrap;
 }
 
-/* Position text in the middle */
+/* Position text in the middle 
 .middle {
   position: absolute;
   top: 50%;
@@ -38,8 +141,8 @@
   text-align: center;
 }
 
-/* Style the <hr> element */
+/* Style the <hr> element 
 hr {
   margin: auto;
   width: 40%;
-} 
+} */
