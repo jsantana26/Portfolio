@@ -25,7 +25,7 @@ import { ComingSoonComponent } from './components/coming-soon/coming-soon.compon
     RouterModule.forRoot([
       {
         path: '',
-        component: ComingSoonComponent
+        component: HomeComponent
       },
       {
         path: 'projects/csharp',
