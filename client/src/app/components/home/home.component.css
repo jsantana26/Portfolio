@@ -45,3 +45,18 @@ html, body{
   font-size:20px;
   font-family: Montserrat;
 }
+
+@media(max-width: 650px){
+  .landing img{
+    width: 70%;
+  }
+  .landing h2{
+    font-size: 20px;
+  }
+  .landing h1{
+    font-size: 40px;
+  }
+  .landing button{
+    font-size: 15px;
+  }
+}
