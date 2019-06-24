@@ -1,0 +1,46 @@
+.card{
+  width: 340px;
+  position: relative;
+  font-family: Montserrat;
+  padding: 20px;
+}
+
+.boxed {
+  padding: 20px;
+  height: 230px;
+}
+
+.purple{
+  background-image: linear-gradient(#4242F4, #EF93EC);
+}
+
+.yellow{
+  background-image: linear-gradient(#E9EF43, #FFD500);
+}
+
+.blue{
+  background-image: linear-gradient(#00C6FB, #005BEA);
+}
+
+.card h2{
+  font-size: 40px;
+}
+
+.card p{
+  font-size: 20px;
+}
+
+.landing-inner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.landing h1{
+  font-size: 50px;
+  font-family: Montserrat;
+}

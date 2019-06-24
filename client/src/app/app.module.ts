@@ -9,6 +9,7 @@ import { ProjectsCSharpComponent } from './projects/projects-csharp/projects-csh
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
+import { CategoryCardsComponent } from './components/category-cards/category-cards.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ComingSoonComponent } from './components/coming-soon/coming-soon.compon
     ProjectsCSharpComponent,
     HomeComponent,
     NotFoundComponent,
-    ComingSoonComponent
+    ComingSoonComponent,
+    CategoryCardsComponent
   ],
   imports: [
     AppRoutingModule,
