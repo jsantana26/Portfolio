@@ -9,8 +9,10 @@ export class CategoryCardsComponent implements OnInit {
   @Input('language') language: string;
   @Input('description') description: string;
   @Input('color') color: string;
+  @Input('imgSrc') imgSrc: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
