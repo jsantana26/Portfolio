@@ -11,8 +11,6 @@ html, body{
 
 .landing{
   position: relative;
-  background-size: cover;
-  background-position: center;
   height:100vh;
 }
 
@@ -34,10 +32,27 @@ html, body{
 
 .card-container{
   display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.center{
-  margin: auto;
-  width: 75%;
-  padding: 10px;
+@media(max-width: 650px){
+  .landing-inner{
+    padding-top:20px;
+  }
+
+  .landing h1{
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+
+  .card-container{
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
