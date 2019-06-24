@@ -38,6 +38,8 @@
 
 .card p{
   font-size: 20px;
+  line-height: 1.5em;
+  height: 4.5em;
 }
 
 .landing-inner{
