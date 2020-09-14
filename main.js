@@ -74,7 +74,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand\" [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\">Jeffrey Santana</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\" [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\">Home <span\n            class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" routerLinkActive=\"router-link-active\" id=\"navbarDropdown\"\n          role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          Projects\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"dropdown-item\" [routerLink]=\"['/projects/csharp']\" routerLinkActive=\"router-link-active\">C#</a>\n        </div>\n      </li>\n    </ul>\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </div>\n</nav> -->\n<router-outlet></router-outlet>"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\r\n  <a class=\"navbar-brand\" [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\">Jeffrey Santana</a>\r\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\r\n    aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n\r\n  <div class=\"collapse navbar-collapse justify-content-between\" id=\"navbarSupportedContent\">\r\n    <ul class=\"navbar-nav mr-auto\">\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\">Home <span\r\n            class=\"sr-only\">(current)</span></a>\r\n      </li>\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" routerLinkActive=\"router-link-active\" id=\"navbarDropdown\"\r\n          role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          My Projects\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/projects']\" routerLinkActive=\"router-link-active\">All</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/projects/csharp']\" routerLinkActive=\"router-link-active\">C#</a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -131,6 +131,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
 /* harmony import */ var _components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/not-found/not-found.component */ "./src/app/components/not-found/not-found.component.ts");
 /* harmony import */ var _components_coming_soon_coming_soon_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/coming-soon/coming-soon.component */ "./src/app/components/coming-soon/coming-soon.component.ts");
+/* harmony import */ var _components_category_cards_category_cards_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/category-cards/category-cards.component */ "./src/app/components/category-cards/category-cards.component.ts");
+
 
 
 
@@ -153,7 +155,8 @@ var AppModule = /** @class */ (function () {
                 _projects_projects_csharp_projects_csharp_component__WEBPACK_IMPORTED_MODULE_7__["ProjectsCSharpComponent"],
                 _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
                 _components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_9__["NotFoundComponent"],
-                _components_coming_soon_coming_soon_component__WEBPACK_IMPORTED_MODULE_10__["ComingSoonComponent"]
+                _components_coming_soon_coming_soon_component__WEBPACK_IMPORTED_MODULE_10__["ComingSoonComponent"],
+                _components_category_cards_category_cards_component__WEBPACK_IMPORTED_MODULE_11__["CategoryCardsComponent"]
             ],
             imports: [
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
@@ -161,7 +164,7 @@ var AppModule = /** @class */ (function () {
                 _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot([
                     {
                         path: '',
-                        component: _components_coming_soon_coming_soon_component__WEBPACK_IMPORTED_MODULE_10__["ComingSoonComponent"]
+                        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"]
                     },
                     {
                         path: 'projects/csharp',
@@ -189,6 +192,82 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/category-cards/category-cards.component.css":
+/*!************************************************************************!*\
+  !*** ./src/app/components/category-cards/category-cards.component.css ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".card{\r\n  width: 340px;\r\n  position: relative;\r\n  font-family: Montserrat;\r\n  padding: 20px;\r\n  border-style: none !important;\r\n}\r\n\r\n.boxed {\r\n  padding: 20px;\r\n  height: 230px;\r\n  position: relative;\r\n}\r\n\r\n.boxed img{  \r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  \r\n  -webkit-transform: translate(-50%, -50%);\r\n  \r\n          transform: translate(-50%, -50%);\r\n  max-height: 210px;\r\n  max-width: 280px;\r\n}\r\n\r\n.link-button {\r\n  margin: 5px;\r\n}\r\n\r\n.purple{\r\n  background-image: linear-gradient(#4242F4, #EF93EC);\r\n}\r\n\r\n.yellow{\r\n  background-image: linear-gradient(#E9EF43, #FFD500);\r\n}\r\n\r\n.blue{\r\n  background-image: linear-gradient(#00C6FB, #005BEA);\r\n}\r\n\r\n.card h2{\r\n  font-size: 40px;\r\n}\r\n\r\n.card p{\r\n  font-size: 20px;\r\n  line-height: 1.5em;\r\n  height: 4.5em;\r\n}\r\n\r\n.landing-inner{\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  text-align: center;\r\n  padding-top: 80px;\r\n}\r\n\r\n.landing h1{\r\n  font-size: 50px;\r\n  font-family: Montserrat;\r\n}\r\n\r\n@media(max-width: 650px){\r\n  .card{\r\n    width: 280px;\r\n    padding: 20px 0px;\r\n  }\r\n\r\n  .boxed {\r\n    padding: 10px;\r\n    height: 160px;\r\n    position: relative;\r\n  }\r\n\r\n  .boxed img{  \r\n    max-width: 260px;\r\n    max-height: 140px;\r\n\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    \r\n    -webkit-transform: translate(-50%, -50%);\r\n    \r\n            transform: translate(-50%, -50%);\r\n  }\r\n\r\n  .link-button {\r\n    margin: 3px;\r\n  }\r\n\r\n  .card h2{\r\n    font-size: 30px;\r\n  }\r\n  \r\n  .card p{\r\n    font-size: 15px;\r\n  }\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9jYXRlZ29yeS1jYXJkcy9jYXRlZ29yeS1jYXJkcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQix1QkFBdUI7RUFDdkIsYUFBYTtFQUNiLDZCQUE2QjtBQUMvQjs7QUFFQTtFQUNFLGFBQWE7RUFDYixhQUFhO0VBQ2Isa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFFBQVE7RUFDUixTQUFTOztFQUVULHdDQUFnQzs7VUFBaEMsZ0NBQWdDO0VBQ2hDLGlCQUFpQjtFQUNqQixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxXQUFXO0FBQ2I7O0FBRUE7RUFDRSxtREFBbUQ7QUFDckQ7O0FBRUE7RUFDRSxtREFBbUQ7QUFDckQ7O0FBRUE7RUFDRSxtREFBbUQ7QUFDckQ7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQixhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsTUFBTTtFQUNOLE9BQU87RUFDUCxXQUFXO0VBQ1gsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0U7SUFDRSxZQUFZO0lBQ1osaUJBQWlCO0VBQ25COztFQUVBO0lBQ0UsYUFBYTtJQUNiLGFBQWE7SUFDYixrQkFBa0I7RUFDcEI7O0VBRUE7SUFDRSxnQkFBZ0I7SUFDaEIsaUJBQWlCOztJQUVqQixrQkFBa0I7SUFDbEIsUUFBUTtJQUNSLFNBQVM7O0lBRVQsd0NBQWdDOztZQUFoQyxnQ0FBZ0M7RUFDbEM7O0VBRUE7SUFDRSxXQUFXO0VBQ2I7O0VBRUE7SUFDRSxlQUFlO0VBQ2pCOztFQUVBO0lBQ0UsZUFBZTtFQUNqQjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9jYXRlZ29yeS1jYXJkcy9jYXRlZ29yeS1jYXJkcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmR7XHJcbiAgd2lkdGg6IDM0MHB4O1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBmb250LWZhbWlseTogTW9udHNlcnJhdDtcclxuICBwYWRkaW5nOiAyMHB4O1xyXG4gIGJvcmRlci1zdHlsZTogbm9uZSAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4uYm94ZWQge1xyXG4gIHBhZGRpbmc6IDIwcHg7XHJcbiAgaGVpZ2h0OiAyMzBweDtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuXHJcbi5ib3hlZCBpbWd7ICBcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiA1MCU7XHJcbiAgbGVmdDogNTAlO1xyXG4gIFxyXG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gIG1heC1oZWlnaHQ6IDIxMHB4O1xyXG4gIG1heC13aWR0aDogMjgwcHg7XHJcbn1cclxuXHJcbi5saW5rLWJ1dHRvbiB7XHJcbiAgbWFyZ2luOiA1cHg7XHJcbn1cclxuXHJcbi5wdXJwbGV7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KCM0MjQyRjQsICNFRjkzRUMpO1xyXG59XHJcblxyXG4ueWVsbG93e1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IGxpbmVhci1ncmFkaWVudCgjRTlFRjQzLCAjRkZENTAwKTtcclxufVxyXG5cclxuLmJsdWV7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KCMwMEM2RkIsICMwMDVCRUEpO1xyXG59XHJcblxyXG4uY2FyZCBoMntcclxuICBmb250LXNpemU6IDQwcHg7XHJcbn1cclxuXHJcbi5jYXJkIHB7XHJcbiAgZm9udC1zaXplOiAyMHB4O1xyXG4gIGxpbmUtaGVpZ2h0OiAxLjVlbTtcclxuICBoZWlnaHQ6IDQuNWVtO1xyXG59XHJcblxyXG4ubGFuZGluZy1pbm5lcntcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiAwO1xyXG4gIGxlZnQ6IDA7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBwYWRkaW5nLXRvcDogODBweDtcclxufVxyXG5cclxuLmxhbmRpbmcgaDF7XHJcbiAgZm9udC1zaXplOiA1MHB4O1xyXG4gIGZvbnQtZmFtaWx5OiBNb250c2VycmF0O1xyXG59XHJcblxyXG5AbWVkaWEobWF4LXdpZHRoOiA2NTBweCl7XHJcbiAgLmNhcmR7XHJcbiAgICB3aWR0aDogMjgwcHg7XHJcbiAgICBwYWRkaW5nOiAyMHB4IDBweDtcclxuICB9XHJcblxyXG4gIC5ib3hlZCB7XHJcbiAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgaGVpZ2h0OiAxNjBweDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICB9XHJcblxyXG4gIC5ib3hlZCBpbWd7ICBcclxuICAgIG1heC13aWR0aDogMjYwcHg7XHJcbiAgICBtYXgtaGVpZ2h0OiAxNDBweDtcclxuXHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDUwJTtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIFxyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XHJcbiAgfVxyXG5cclxuICAubGluay1idXR0b24ge1xyXG4gICAgbWFyZ2luOiAzcHg7XHJcbiAgfVxyXG5cclxuICAuY2FyZCBoMntcclxuICAgIGZvbnQtc2l6ZTogMzBweDtcclxuICB9XHJcbiAgXHJcbiAgLmNhcmQgcHtcclxuICAgIGZvbnQtc2l6ZTogMTVweDtcclxuICB9XHJcbn1cclxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/components/category-cards/category-cards.component.html":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/category-cards/category-cards.component.html ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card\">\r\n  <div class=\"boxed\" [ngClass]=\"color\">\r\n    <img [src]=\"imgSrc\">\r\n  </div>\r\n  <h2>{{title}}</h2>\r\n  <p>{{description}}</p>\r\n  <button class=\"btn btn-primary link-button\">View Project Details</button>\r\n  <button class=\"btn btn-primary link-button\">View on Github</button>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/category-cards/category-cards.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/category-cards/category-cards.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: CategoryCardsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoryCardsComponent", function() { return CategoryCardsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var CategoryCardsComponent = /** @class */ (function () {
+    function CategoryCardsComponent() {
+    }
+    CategoryCardsComponent.prototype.ngOnInit = function () {
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('title'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CategoryCardsComponent.prototype, "title", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('description'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CategoryCardsComponent.prototype, "description", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('color'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CategoryCardsComponent.prototype, "color", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('imgSrc'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CategoryCardsComponent.prototype, "imgSrc", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('externalLink'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CategoryCardsComponent.prototype, "externalLink", void 0);
+    CategoryCardsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-category-cards',
+            template: __webpack_require__(/*! ./category-cards.component.html */ "./src/app/components/category-cards/category-cards.component.html"),
+            styles: [__webpack_require__(/*! ./category-cards.component.css */ "./src/app/components/category-cards/category-cards.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], CategoryCardsComponent);
+    return CategoryCardsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/coming-soon/coming-soon.component.css":
 /*!******************************************************************!*\
   !*** ./src/app/components/coming-soon/coming-soon.component.css ***!
@@ -207,7 +286,7 @@ module.exports = " * {\r\n   box-sizing: border-box;\r\n }\r\n\r\n html, body{\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"landing\">\n  <div class=\"landing-inner\">\n    <h1 class=\"comingsoon\">Coming Soon</h1>\n    <div class=\"countdown\"></div>\n  </div>\n</div>"
+module.exports = "<div class=\"landing\">\r\n  <div class=\"landing-inner\">\r\n    <h1 class=\"comingsoon\">Coming Soon</h1>\r\n    <div class=\"countdown\"></div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -277,7 +356,7 @@ var ComingSoonComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.content{\r\n  margin: 0;\r\n  font-family: Montserrat, Arial, Helvetica, sans-serif;\r\n  color:#fff;\r\n  background:#333;\r\n  overflow: hidden;\r\n}\r\n\r\n.landing{\r\n  position: relative;\r\n  background-image: url('ComputerCode.jpg');\r\n  background-size: cover;\r\n  background-position: center;\r\n  height:100vh;\r\n}\r\n\r\n.landing-inner{\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background: rgba(0,0,0,0.7);\r\n  text-align: center;\r\n  padding-top: 230px;\r\n}\r\n\r\n.landing h2 {\r\n  font-size: 30px;\r\n  color: #FF8105;\r\n}\r\n\r\n.landing h1{\r\n  font-size: 85px;\r\n}\r\n\r\n.landing button{\r\n  margin-top: 100px;\r\n  font-size:20px;\r\n}\r\n\r\n@media(max-width: 650px){\r\n  .landing img{\r\n    width: 70%;\r\n  }\r\n  .landing h2{\r\n    font-size: 20px;\r\n  }\r\n  .landing h1{\r\n    font-size: 40px;\r\n  }\r\n  .landing button{\r\n    font-size: 15px;\r\n  }\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLFNBQVM7RUFDVCxxREFBcUQ7RUFDckQsVUFBVTtFQUNWLGVBQWU7RUFDZixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIseUNBQStDO0VBQy9DLHNCQUFzQjtFQUN0QiwyQkFBMkI7RUFDM0IsWUFBWTtBQUNkOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLE1BQU07RUFDTixPQUFPO0VBQ1AsV0FBVztFQUNYLFlBQVk7RUFDWiwyQkFBMkI7RUFDM0Isa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGVBQWU7RUFDZixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixjQUFjO0FBQ2hCOztBQUVBO0VBQ0U7SUFDRSxVQUFVO0VBQ1o7RUFDQTtJQUNFLGVBQWU7RUFDakI7RUFDQTtJQUNFLGVBQWU7RUFDakI7RUFDQTtJQUNFLGVBQWU7RUFDakI7QUFDRiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcclxuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG59XHJcblxyXG4uY29udGVudHtcclxuICBtYXJnaW46IDA7XHJcbiAgZm9udC1mYW1pbHk6IE1vbnRzZXJyYXQsIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7XHJcbiAgY29sb3I6I2ZmZjtcclxuICBiYWNrZ3JvdW5kOiMzMzM7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufVxyXG5cclxuLmxhbmRpbmd7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi9pbWcvQ29tcHV0ZXJDb2RlLmpwZycpO1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGhlaWdodDoxMDB2aDtcclxufVxyXG5cclxuLmxhbmRpbmctaW5uZXJ7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogMDtcclxuICBsZWZ0OiAwO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBiYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLDAuNyk7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIHBhZGRpbmctdG9wOiAyMzBweDtcclxufVxyXG5cclxuLmxhbmRpbmcgaDIge1xyXG4gIGZvbnQtc2l6ZTogMzBweDtcclxuICBjb2xvcjogI0ZGODEwNTtcclxufVxyXG5cclxuLmxhbmRpbmcgaDF7XHJcbiAgZm9udC1zaXplOiA4NXB4O1xyXG59XHJcblxyXG4ubGFuZGluZyBidXR0b257XHJcbiAgbWFyZ2luLXRvcDogMTAwcHg7XHJcbiAgZm9udC1zaXplOjIwcHg7XHJcbn1cclxuXHJcbkBtZWRpYShtYXgtd2lkdGg6IDY1MHB4KXtcclxuICAubGFuZGluZyBpbWd7XHJcbiAgICB3aWR0aDogNzAlO1xyXG4gIH1cclxuICAubGFuZGluZyBoMntcclxuICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICB9XHJcbiAgLmxhbmRpbmcgaDF7XHJcbiAgICBmb250LXNpemU6IDQwcHg7XHJcbiAgfVxyXG4gIC5sYW5kaW5nIGJ1dHRvbntcclxuICAgIGZvbnQtc2l6ZTogMTVweDtcclxuICB9XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -288,7 +367,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron\">\n  <h1>Jeffrey Santana</h1>\n  <p>\n    This website is coming soon.\n  </p>\n  <p>\n    Check back soon to see any changes made.\n  </p>\n</div>"
+module.exports = "<div class=\"content\">\r\n  <div class=\"landing\">\r\n    <div class=\"landing-inner\">\r\n      <h2 class=\"hero-label\">Full Stack Web Developer - Data Scientist</h2>\r\n      <h1 class=\"hero\">Jeffrey Santana</h1>\r\n      <button class=\"btn btn-primary\" [routerLink]=\"['/projects']\" routerLinkActive=\"router-link-active\">SEE MY\r\n        WORK</button>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -344,7 +423,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  not-found works!\n</p>\n"
+module.exports = "<p>\r\n  not-found works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -400,7 +479,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  projects-csharp works!\n</p>\n"
+module.exports = "<p>\r\n  projects-csharp works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -445,7 +524,7 @@ var ProjectsCSharpComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2plY3RzL3Byb2plY3RzLWluZGV4L3Byb2plY3RzLWluZGV4LmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "* {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml, body{\r\n  margin: 0;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  color:#333;\r\n  overflow: hidden;\r\n}\r\n\r\n.landing{\r\n  position: relative;\r\n  height:100vh;\r\n}\r\n\r\n.landing-inner{\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  text-align: center;\r\n  padding-top: 60px;\r\n}\r\n\r\n.landing h1{\r\n  font-size: 50px;\r\n  font-family: Montserrat;\r\n  padding-bottom: 50px;\r\n}\r\n\r\n.card-container{\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  position: fixed;\r\n  top: 50%;\r\n  left: 50%;\r\n  -webkit-transform: translate(-50%, -50%);\r\n          transform: translate(-50%, -50%);\r\n}\r\n\r\n@media(max-width: 650px){\r\n  .landing-inner{\r\n    padding-top:20px;\r\n  }\r\n\r\n  .landing h1{\r\n    font-size: 30px;\r\n    padding-bottom: 10px;\r\n  }\r\n\r\n  .card-container{\r\n    -webkit-flex-direction: column;\r\n            flex-direction: column;\r\n    position: absolute;\r\n    top: 10%;\r\n    left: 50%;\r\n    -webkit-transform: translate(-50%, 0%);\r\n            transform: translate(-50%, 0%);\r\n  }\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvamVjdHMvcHJvamVjdHMtaW5kZXgvcHJvamVjdHMtaW5kZXguY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLFNBQVM7RUFDVCx5Q0FBeUM7RUFDekMsVUFBVTtFQUNWLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsTUFBTTtFQUNOLE9BQU87RUFDUCxXQUFXO0VBQ1gsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsdUJBQXVCO0VBQ3ZCLG9CQUFvQjtBQUN0Qjs7QUFFQTtFQUNFLHFCQUFhO0VBQWIsYUFBYTtFQUNiLGVBQWU7RUFDZixRQUFRO0VBQ1IsU0FBUztFQUNULHdDQUFnQztVQUFoQyxnQ0FBZ0M7QUFDbEM7O0FBRUE7RUFDRTtJQUNFLGdCQUFnQjtFQUNsQjs7RUFFQTtJQUNFLGVBQWU7SUFDZixvQkFBb0I7RUFDdEI7O0VBRUE7SUFDRSw4QkFBc0I7WUFBdEIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtJQUNsQixRQUFRO0lBQ1IsU0FBUztJQUNULHNDQUE4QjtZQUE5Qiw4QkFBOEI7RUFDaEM7QUFDRiIsImZpbGUiOiJzcmMvYXBwL3Byb2plY3RzL3Byb2plY3RzLWluZGV4L3Byb2plY3RzLWluZGV4LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcclxuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG59XHJcblxyXG5odG1sLCBib2R5e1xyXG4gIG1hcmdpbjogMDtcclxuICBmb250LWZhbWlseTogQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZjtcclxuICBjb2xvcjojMzMzO1xyXG4gIG92ZXJmbG93OiBoaWRkZW47XHJcbn1cclxuXHJcbi5sYW5kaW5ne1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBoZWlnaHQ6MTAwdmg7XHJcbn1cclxuXHJcbi5sYW5kaW5nLWlubmVye1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICB0b3A6IDA7XHJcbiAgbGVmdDogMDtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIHBhZGRpbmctdG9wOiA2MHB4O1xyXG59XHJcblxyXG4ubGFuZGluZyBoMXtcclxuICBmb250LXNpemU6IDUwcHg7XHJcbiAgZm9udC1mYW1pbHk6IE1vbnRzZXJyYXQ7XHJcbiAgcGFkZGluZy1ib3R0b206IDUwcHg7XHJcbn1cclxuXHJcbi5jYXJkLWNvbnRhaW5lcntcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB0b3A6IDUwJTtcclxuICBsZWZ0OiA1MCU7XHJcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XHJcbn1cclxuXHJcbkBtZWRpYShtYXgtd2lkdGg6IDY1MHB4KXtcclxuICAubGFuZGluZy1pbm5lcntcclxuICAgIHBhZGRpbmctdG9wOjIwcHg7XHJcbiAgfVxyXG5cclxuICAubGFuZGluZyBoMXtcclxuICAgIGZvbnQtc2l6ZTogMzBweDtcclxuICAgIHBhZGRpbmctYm90dG9tOiAxMHB4O1xyXG4gIH1cclxuXHJcbiAgLmNhcmQtY29udGFpbmVye1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMTAlO1xyXG4gICAgbGVmdDogNTAlO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgMCUpO1xyXG4gIH1cclxufSJdfQ== */"
 
 /***/ }),
 
@@ -456,7 +535,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  projects-index works!\n</p>\n"
+module.exports = "<div class=\"landing\">\r\n  <div class=\"landing-inner\">\r\n    <h1 class=\"title\">Languages</h1>\r\n    <div class=\"card-container\">\r\n      <app-category-cards title=\"C#\" description=\"View projects using C# that include ASP.NET, WPF, and Unity.\"\r\n        color=\"purple\" imgSrc=\"assets/img/c-sharp-logo.png\">\r\n      </app-category-cards>\r\n      <app-category-cards title=\"Javascript\" description=\"View web apps built using javascript libraries.\"\r\n        color=\"yellow\" imgSrc=\"assets/img/js-logo.png\">\r\n      </app-category-cards>\r\n      <app-category-cards title=\"Python\" description=\"View machine learning and data analysis projects using python.\"\r\n        color=\"blue\" imgSrc=\"assets/img/python-logo.png\">\r\n      </app-category-cards>\r\n      <app-category-cards title=\"Meal Monster\" description=\"Recipe website created using Angular for the front end, and .NET for the backend.\"\r\n        color=\"yellow\" imgSrc=\"assets/img/meal-monster-screenhot.png\">\r\n      </app-category-cards>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -471,7 +550,9 @@ module.exports = "<p>\n  projects-index works!\n</p>\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsIndexComponent", function() { return ProjectsIndexComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _components_category_cards_category_cards_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../components/category-cards/category-cards.component */ "./src/app/components/category-cards/category-cards.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
 
 
 var ProjectsIndexComponent = /** @class */ (function () {
@@ -480,10 +561,13 @@ var ProjectsIndexComponent = /** @class */ (function () {
     ProjectsIndexComponent.prototype.ngOnInit = function () {
     };
     ProjectsIndexComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-projects-index',
             template: __webpack_require__(/*! ./projects-index.component.html */ "./src/app/projects/projects-index/projects-index.component.html"),
             styles: [__webpack_require__(/*! ./projects-index.component.css */ "./src/app/projects/projects-index/projects-index.component.css")]
+        }),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+            declarations: [_components_category_cards_category_cards_component__WEBPACK_IMPORTED_MODULE_1__["CategoryCardsComponent"]]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], ProjectsIndexComponent);
@@ -555,7 +639,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Jeffrey\Documents\My Web Sites\Portfolio\client\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\jeffr\OneDrive\Documents\Web Sites\Portfolio\Portfolio\client\src\main.ts */"./src/main.ts");
 
 
 /***/ })
